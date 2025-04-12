@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎉 ¡Feliz Cumpleaños Tadeo! 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(270deg, #ff8177, #ffcc70, #cf556c, #ff8177);
+      background-size: 800% 800%;
+      animation: backgroundAnimation 20s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    @keyframes backgroundAnimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 4em;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 10px #000;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-30px); }
+      60% { transform: translateY(-15px); }
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 700px;
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #000;
+      margin-bottom: 30px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #ff4e50, #f9d423);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .sparkles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://i.gifer.com/origin/67/67c589033c5db946c44fefb7c25e12ab_w200.gif');
+      background-size: cover;
+      opacity: 0.1;
+      mix-blend-mode: screen;
+      animation: sparkleAnimation 30s linear infinite;
+    }
+
+    @keyframes sparkleAnimation {
+      0% {background-position: 0 0;}
+      100% {background-position: 100% 100%;}
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="sparkles"></div>
+
+<h1>🎉 ¡Feliz Cumpleaños Tadeo! 🎉</h1>
+
+<p>🏀 Nuestro crack del básquet y futuro Rey de los Piratas 🏴‍☠️<br><br>
+Hoy es tu día, hermano. Sigue soñando en grande, luchando con fuerza, y conquistando el mundo como Luffy. ¡Espero que la pases increíble y sigas encestando canastas y sueños! 🚀
+</p>
+
+<button onclick="celebrar()">¡Haz click para celebrar! 🎉</button>
+<button onclick="location.reload()">¡Otra vez! 🔄</button>
+
+<script>
+function celebrar() {
+  confetti({
+    particleCount: 200,
+    spread: 120,
+    origin: { y: 0.6 }
+  });
+}
+</script>
+
+</body>
+</html>
