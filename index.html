@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🎉 ¡Feliz Cumpleaños Tadeo! 🎉</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
@@ -10,91 +10,73 @@
     body {
       margin: 0;
       padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(270deg, #ff8177, #ff867a, #ff8c7f, #f99185, #cf556c, #b12a5b);
-      background-size: 1200% 1200%;
+      height: 100vh;
+      background: linear-gradient(270deg, #ff8177, #ff867a, #ff8c7f, #f99185, #cf556c, #b12a5b, #6f0f4e, #2f044e);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
       font-family: 'Poppins', sans-serif;
+      color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      animation: backgroundMove 20s ease infinite;
-      color: white;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
-    @keyframes backgroundMove {
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    @keyframes gradient {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.5rem;
-      max-width: 600px;
-      padding: 0 20px;
-    }
-
-    button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      background-color: #ffffff;
-      color: #b12a5b;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #ffe0e6;
-    }
-
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
+
       p {
-        font-size: 1.2rem;
-      }
-      button {
-        padding: 12px 24px;
         font-size: 1rem;
       }
     }
 
     @media (max-width: 480px) {
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
+
       p {
-        font-size: 1rem;
-      }
-      button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
-<body>
+<body onload="confetti()">
 
-  <h1>🎉 ¡Feliz Cumpleaños, Tadeo! 🎉</h1>
-  <p>Te deseo un día lleno de sonrisas, pastel y momentos inolvidables. ¡Que todos tus sueños se hagan realidad!</p>
-  <button onclick="launchConfetti()">¡Celebrar!</button>
+  <h1>🎉 ¡Feliz Cumpleaños Tadeo! 🎉</h1>
+
+  <p>🏀 Nuestro crack del básquet y futuro Rey de los Piratas 🏴‍☠️<br><br>
+    Hoy es tu día, hermano. Sigue soñando en grande, luchando con fuerza, y conquistando el mundo como Luffy. ¡Espero que la pases increíble y sigas encestando canastas y sueños! 🚀
+  </p>
 
   <script>
-    function launchConfetti() {
+    function confetti() {
       confetti({
         particleCount: 200,
-        spread: 100,
+        spread: 70,
         origin: { y: 0.6 }
       });
     }
